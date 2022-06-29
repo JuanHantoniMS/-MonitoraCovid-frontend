@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:monitoracovid/Pages/HomePage.dart';
 
+import 'Pages/AgendamentoPage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/homePage",
       routes: {
         "/homePage": (context)=> HomePage(),
+        "/agendamento": (context)=> AgendamentoPage(),
       },
       theme: ThemeData(
         // This is the theme of your application.
@@ -35,4 +38,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
