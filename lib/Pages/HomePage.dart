@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import '../core/AppBuilders.dart';
 import '../core/AppColors.dart';
+import '../core/AppFunctions.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -73,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                           fontSize: 24),
                     ),)
               ),
-              Builders.Rooms(context, roomName, horarioInicial, horarioFinal),
+              Builders.HomePageRooms(context, roomName, horarioInicial, horarioFinal),
 
 
             ],
@@ -82,6 +83,7 @@ class _HomePageState extends State<HomePage> {
         ),
         bottomNavigationBar: Builders.NavigationBar(context, indexPage),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
         floatingActionButton: Container(
           decoration: BoxDecoration(
               color: AppColors.themeColor,
@@ -92,7 +94,7 @@ class _HomePageState extends State<HomePage> {
               iconSize: 50,
               color: Colors.white,
               icon: Icon(Icons.qr_code,),
-              onPressed:(){}),
+              onPressed:(){AppFunctions.goToQrScanPage(context);}),
         )
     );
   }

@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:monitoracovid/Pages/HomePage.dart';
+import 'package:monitoracovid/Pages/LoginPage.dart';
+import 'package:monitoracovid/Pages/QrScanPage.dart';
+import 'package:monitoracovid/Pages/RoomPage.dart';
+import 'package:monitoracovid/Pages/SplashPage.dart';
+import 'package:monitoracovid/Pages/admin/AdminRoomsPage.dart';
 
 import 'Pages/AgendamentoPage.dart';
+import 'Pages/admin/NewRoom.dart';
 
 
 void main() {
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -14,12 +21,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Flutter Demo',
-      initialRoute: "/homePage",
+      initialRoute: "/loginPage",
       routes: {
         "/homePage": (context)=> HomePage(),
         "/agendamento": (context)=> AgendamentoPage(),
+        "/roomPage": (context) => RoomPage(),
+        "/qrScanPage": (context) => QrScanPage(),
+
+        "/newRoom" : (context) => NewRoom(),
+        "/adminRoomPage" : (context) => AdminRoomsPage(),
+        "/" : (context) => SplashPage(),
+        "/loginPage" : (context) => LoginPage(),
       },
       theme: ThemeData(
         // This is the theme of your application.
@@ -36,5 +51,11 @@ class MyApp extends StatelessWidget {
       ),
 
     );
+
+
+
+
   }
+
+
 }
