@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monitoracovid/Pages/CadastroPage.dart';
 import 'package:monitoracovid/Pages/HomePage.dart';
 import 'package:monitoracovid/Pages/LoginPage.dart';
 import 'package:monitoracovid/Pages/QrScanPage.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         "/adminRoomPage" : (context) => AdminRoomsPage(),
         "/" : (context) => SplashPage(),
         "/loginPage" : (context) => LoginPage(),
+        "/cadastroPage" : (context) => CadastroPage(),
       },
       theme: ThemeData(
         // This is the theme of your application.

@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                       Container(
                         padding: EdgeInsets.only(top: 20.0),
                         child: TextButton(
-                          onPressed: () async {},
+                          onPressed: ()  {Navigator.pushNamed(context, '/homePage');},
                           style: TextButton.styleFrom(
                             padding: EdgeInsets.zero,
                             shape: RoundedRectangleBorder(
@@ -188,7 +188,7 @@ class _LoginPageState extends State<LoginPage> {
                       Container(
                         padding: EdgeInsets.only(top: 5.0),
                         child: TextButton(
-                          onPressed: () async {},
+                          onPressed: () {Navigator.pushNamed(context, '/cadastroPage');},
                           style: TextButton.styleFrom(
                             padding: EdgeInsets.zero,
                             shape: RoundedRectangleBorder(
