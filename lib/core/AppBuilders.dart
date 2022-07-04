@@ -170,7 +170,7 @@ class Builders{
         height: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all( Radius.circular(10),),
-          color: AppColors.containerColor,
+          color: AppColors.themeColor,
         ),
         child: Column(children: [
           Align(

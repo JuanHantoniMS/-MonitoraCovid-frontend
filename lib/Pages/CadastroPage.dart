@@ -37,7 +37,7 @@ class _LoginPageState extends State<CadastroPage> {
                   ],),)
             ),
             SingleChildScrollView(
-          
+
               padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
               child: Align(
                 child: Column(

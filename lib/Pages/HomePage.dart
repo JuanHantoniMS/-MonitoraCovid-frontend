@@ -3,6 +3,7 @@ import 'package:table_calendar/table_calendar.dart';
 import '../core/AppBuilders.dart';
 import '../core/AppColors.dart';
 import '../core/AppFunctions.dart';
+import '../core/AppImages.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -25,16 +26,52 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var screenWidth = MediaQuery
+        .of(context)
+        .size
+        .width;
+    var screenHeight = MediaQuery
+        .of(context)
+        .size
+        .width;
     return Scaffold(
         body: SafeArea(child: Container(
           decoration: BoxDecoration(color: Colors.white),
           child: Column(
             children: [
               Container(
-                height: 175,
-                decoration: BoxDecoration(
-                    color: Colors.red
-                ),
+                height: 0.2 * screenHeight,
+                width: screenWidth,
+                decoration: BoxDecoration(gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: <Color>[
+                    AppColors.themeColor,
+                    Color(0xff239393),
+                  ],)),
+                child:
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 20, bottom: 4),
+                        child:Image.asset(
+                          alignment: Alignment.centerLeft,
+                          height: 0.5 * screenHeight,
+                          AppImages.logo,
+                        ) ,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 15),
+                      child: DefaultTextStyle(
+                        child: Text("MONITORA COVID",),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                        )
+                    ],
+                  )
               ),
               Container(
                 child: TableCalendar(
