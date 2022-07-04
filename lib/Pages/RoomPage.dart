@@ -23,6 +23,11 @@ class _RoomPageState extends State<RoomPage> {
     int indexPage = 3;
     var screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: AppColors.themeColor,
+          centerTitle: true,
+          title: Text("Salas"),
+        ),
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(child:
         SafeArea(child: Container(

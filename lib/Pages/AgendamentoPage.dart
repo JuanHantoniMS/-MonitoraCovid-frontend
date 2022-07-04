@@ -28,6 +28,11 @@ class _AgendamentoPageState extends State<AgendamentoPage> {
 
     var screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: AppColors.themeColor,
+          centerTitle: true,
+          title: Text(" Agendamento"),
+        ),
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(child:
         SafeArea(child: Container(
@@ -35,16 +40,6 @@ class _AgendamentoPageState extends State<AgendamentoPage> {
           child: Column(
             children: [
               Container(),
-              Padding(
-                padding: EdgeInsets.only(top:100),
-                child: Text(
-                  "Agendamento",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
@@ -57,7 +52,6 @@ class _AgendamentoPageState extends State<AgendamentoPage> {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-
               ),
               Container(
                 padding: EdgeInsets.fromLTRB(10,0,10,0),

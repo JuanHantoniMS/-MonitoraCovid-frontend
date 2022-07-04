@@ -62,7 +62,7 @@ class Builders{
               icon: Icon(Icons.schedule,
                   color: index == 2 ?AppColors.themeColor : Colors.grey),
               onPressed:(){
-                Navigator.pushNamed(context, '/agendamento');
+                Navigator.pushNamed(context, '/agendamentoPage');
               }),
           IconButton(
               iconSize: iconSize,

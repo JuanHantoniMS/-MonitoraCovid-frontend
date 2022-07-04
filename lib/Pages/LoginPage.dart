@@ -147,8 +147,8 @@ class _LoginPageState extends State<LoginPage> {
                                 BorderRadius.circular(30.0),
                               ),
                               child: Container(
-                                height: 0.15 * screenHeight,
-                                width: 0.40 * screenHeight,
+                                height: 0.12 * screenHeight,
+                                width: 0.70 * screenHeight,
                                 alignment: Alignment.center,
                                 child: Text(
                                   'Login',
@@ -164,27 +164,21 @@ class _LoginPageState extends State<LoginPage> {
                         padding: EdgeInsets.only(
                             top: screenHeight * 0.03, bottom: screenHeight * 0.03),
                         child: Container(
-                          width: 0.7 * screenWidth,
+                          width: 0.9 * screenWidth,
                             child: Row(children: <Widget>[
                               Expanded(
                                   child: Divider(
                                     color: Colors.black,
-                                    endIndent: 20,
-                                    thickness: 1,
-                                  )),
-                              Text("OU",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 17.0)
-
-                              ),
-                              Expanded(
-                                  child: Divider(
-                                    color: Colors.black,
-                                    indent: 20,
                                     thickness: 1,
                                   )),
                             ])),
                       ),
+                   Padding(padding: EdgeInsets.only(bottom: 5),
+                   child:    Text("Ainda não possui uma conta?",
+                       style: TextStyle(
+                           color: Colors.black,
+                           fontSize: 15,
+                           fontWeight: FontWeight.bold)),),
                       Container(
                         padding: EdgeInsets.only(top: 5.0),
                         child: TextButton(
@@ -210,8 +204,8 @@ class _LoginPageState extends State<LoginPage> {
                                 BorderRadius.circular(30.0),
                               ),
                               child: Container(
-                                height: 0.15 * screenHeight,
-                                width: 0.40 * screenHeight,
+                                height: 0.12 * screenHeight,
+                                width: 0.70 * screenHeight,
                                 alignment: Alignment.center,
                                 child: Text(
                                   'Cadastro',

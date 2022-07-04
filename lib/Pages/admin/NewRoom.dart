@@ -29,7 +29,7 @@ class _NewRoom extends State<NewRoom> {
       ),
       body: Column(
         children: [
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.only(top:30, left:10),
@@ -42,6 +42,53 @@ class _NewRoom extends State<NewRoom> {
               ),
             ),
 
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(10,0,10,0),
+            width: screenWidth,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                border: UnderlineInputBorder(),
+                labelText: '',
+              ),
+            ),
+          ),
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(top:30, left:10),
+              child: Text(
+                "Máximo de pessoas",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(10,0,10,0),
+            width: screenWidth,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                border: UnderlineInputBorder(),
+                labelText: '',
+              ),
+            ),
+          ),
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(top:30, left:10),
+              child: Text(
+                "Tolerância",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
           Container(
             padding: EdgeInsets.fromLTRB(10,0,10,0),
@@ -66,16 +113,17 @@ class _NewRoom extends State<NewRoom> {
                     borderRadius: BorderRadius.circular(5.0),
                   ),
                 ),
-                onPressed: () async{
-                },
+                onPressed: () async{},
                 child:  Padding(padding: EdgeInsets.only(top:15, bottom: 15),
                   child: Text('Gerar QR-code',
                     style: TextStyle(
                         color: Colors.white),
                   ),)
             ),
-          )
+          ),
+
         ],
+
       ),
       bottomNavigationBar: Builders.AdminNavigationBar(context, indexPage),
 

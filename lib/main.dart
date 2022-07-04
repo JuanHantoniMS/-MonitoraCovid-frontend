@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Flutter Demo',
-      initialRoute: "/loginPage",
+      initialRoute: "/splashPage",
       routes: {
         "/homePage": (context)=> HomePage(),
-        "/agendamento": (context)=> AgendamentoPage(),
+        "/agendamentoPage": (context)=> AgendamentoPage(),
         "/roomPage": (context) => RoomPage(),
         "/qrScanPage": (context) => QrScanPage(),
 
@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
         "/" : (context) => SplashPage(),
         "/loginPage" : (context) => LoginPage(),
         "/cadastroPage" : (context) => CadastroPage(),
+        "/splashPage" : (context) => SplashPage(),
       },
       theme: ThemeData(
         // This is the theme of your application.
