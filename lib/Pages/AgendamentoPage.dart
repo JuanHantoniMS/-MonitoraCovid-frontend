@@ -29,6 +29,7 @@ class _AgendamentoPageState extends State<AgendamentoPage> {
     var screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: AppColors.themeColor,
           centerTitle: true,
           title: Text(" Agendamento"),

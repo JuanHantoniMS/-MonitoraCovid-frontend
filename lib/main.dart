@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:monitoracovid/Pages/CadastroPage.dart';
 import 'package:monitoracovid/Pages/HomePage.dart';
 import 'package:monitoracovid/Pages/LoginPage.dart';
+import 'package:monitoracovid/Pages/PerfilPage.dart';
 import 'package:monitoracovid/Pages/QrScanPage.dart';
 import 'package:monitoracovid/Pages/RoomPage.dart';
 import 'package:monitoracovid/Pages/SplashPage.dart';
 import 'package:monitoracovid/Pages/admin/AdminRoomsPage.dart';
+import 'package:monitoracovid/Pages/admin/CreatedRoomPage.dart';
 
 import 'Pages/AgendamentoPage.dart';
 import 'Pages/admin/NewRoom.dart';
@@ -28,11 +30,13 @@ class MyApp extends StatelessWidget {
       initialRoute: "/splashPage",
       routes: {
         "/homePage": (context)=> HomePage(),
+       
         "/agendamentoPage": (context)=> AgendamentoPage(),
         "/roomPage": (context) => RoomPage(),
         "/qrScanPage": (context) => QrScanPage(),
 
         "/newRoom" : (context) => NewRoom(),
+        
         "/adminRoomPage" : (context) => AdminRoomsPage(),
         "/" : (context) => SplashPage(),
         "/loginPage" : (context) => LoginPage(),

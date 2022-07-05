@@ -7,27 +7,34 @@ import 'package:monitoracovid/main.dart';
 import '../core/AppBuilders.dart';
 import '../core/AppColors.dart';
 
-class RoomPage extends StatefulWidget {
-  const RoomPage({Key? key}) : super(key: key);
+class PerfilPage extends StatefulWidget {
+  final String name;
+  final String userName;
+  final String email;
+  const PerfilPage({Key? key,
+  required this.name,
+  required this.userName,
+  required this.email
+  }) : super(key: key);
 
   @override
-  State<RoomPage> createState() => _RoomPageState();
+  State<PerfilPage> createState() => _PerfilPage();
 }
 
-class _RoomPageState extends State<RoomPage> {
+class _PerfilPage extends State<PerfilPage> {
 
   @override
 
 
   Widget build(BuildContext context) {
-    int indexPage = 3;
+    int indexPage = 1;
     var screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: AppColors.themeColor,
           centerTitle: true,
-          title: Text("Salas"),
+          title: Text("Meu Perfil"),
         ),
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(child:
@@ -35,8 +42,11 @@ class _RoomPageState extends State<RoomPage> {
           decoration: BoxDecoration(color: Colors.white),
           child: Column(
             children: [
-              Builders.RoomPageRoom(context, "Sala 1", false),
-              Builders.RoomPageRoom(context, "Sala 2", true),
+              Text(widget.name),
+              Text("Username"),
+              Text(widget.userName),
+              Text("Email"),
+              Text(widget.email)
             ],
           ),
         ),

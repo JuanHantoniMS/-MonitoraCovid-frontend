@@ -54,7 +54,9 @@ class Builders{
               iconSize: iconSize,
               icon: Icon(Icons.person,
                   color: index == 1 ?AppColors.themeColor : Colors.grey),
-              onPressed:(){}),
+              onPressed:(){
+                 Navigator.pushNamed(context, '/perfilPage');
+              }),
 
           Padding(padding: EdgeInsets.fromLTRB(30,0,30,0)),
           IconButton(
@@ -133,7 +135,7 @@ class Builders{
         height: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all( Radius.circular(10),),
-          color: AppColors.containerColor,
+          color: AppColors.themeColor,
         ),
         child: Column(children: [
           Align(
